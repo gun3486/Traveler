@@ -14,13 +14,19 @@ class Body extends StatelessWidget {
             fit: BoxFit.cover,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: getProportionateScreenHeight(80),),
                 Text(
                   "Travelers",
                   style: TextStyle(fontSize: getProportionateScreenWidth(73),
                   fontWeight: FontWeight.bold,
                   color: Colors.tealAccent
                   ),
+                ),
+                Text(
+                  'Travel Community App',
+                  style: TextStyle(color: Colors.white),
                 )
               ],
             )
