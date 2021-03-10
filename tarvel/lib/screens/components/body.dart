@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
                   "Travelers",
                   style: TextStyle(fontSize: getProportionateScreenWidth(73),
                   fontWeight: FontWeight.bold,
-                  color: Colors.white
+                  color: Colors.tealAccent
                   ),
                 )
               ],
