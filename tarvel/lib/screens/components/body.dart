@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Travel Community App',
+                  'Travel Community App250',
                   style: TextStyle(color: Colors.white),
                 )
               ],
