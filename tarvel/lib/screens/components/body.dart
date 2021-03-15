@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel/constants.dart';
+import 'package:travel/screens/components/search_field.dart';
 import 'package:travel/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -7,6 +9,7 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         Stack(
+          overflow: Overflow.visible,
           alignment: Alignment.center,
           children: [
             Image.asset("assets/images/home_bg.png",
@@ -29,6 +32,10 @@ class Body extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 )
               ],
+            ),
+            Positioned(
+              bottom: getProportionateScreenWidth(-25),
+              child: SearchField(),
             )
           ],
         ),
