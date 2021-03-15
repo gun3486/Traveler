@@ -10,6 +10,7 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         HomeHeader(),
+        Title(color: null, child: null)
       ],
     );
   }
