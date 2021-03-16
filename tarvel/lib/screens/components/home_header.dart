@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel/screens/components/search_field.dart';
 import '../../size_config.dart';
+import 'package:file/memory.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
