@@ -59,6 +59,7 @@ class Body extends StatelessWidget {
                           fontSize: 12, fontWeight: FontWeight.w600
                         ),
                       ),
+                      VerticalSpacing(of: 10),
                       Travelers()
                     ],
                   ),
@@ -79,13 +80,29 @@ class Travelers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipOval(
-       child: Image.asset(
-        travelSpots[0].users[0].image,
-        height: getProportionateScreenHeight(28),
-        width: getProportionateScreenWidth(28),
-        fit: BoxFit.cover,
+    return SizedBox(
+      width: double.infinity,
+      height: getProportionateScreenWidth(30),
+      child: Stack(
+        children: [
+         ...List.generate(travelSpots[0].users.length, 
+         (index) => Positioned(
+           left: 0,
+           child: buildTravelerFace(),
+         ))
+        ],
       ),
     );
+  }
+
+  ClipOval buildTravelerFace() {
+    return ClipOval(
+         child: Image.asset(
+          travelSpots[0].users[0].image,
+          height: getProportionateScreenHeight(28),
+          width: getProportionateScreenWidth(28),
+          fit: BoxFit.cover,
+        ),
+      );
   }
 }
