@@ -32,15 +32,59 @@ class Body extends StatelessWidget {
                         topRight: Radius.circular(20)
                       ),
                       image: DecorationImage(
-                        image: AssetImage(travelSpots[0].image)
+                        image: AssetImage(travelSpots[0].image),
+                        fit: BoxFit.cover,
                       )
                     ),
                   ),
                 ),
+                Container(
+                  width: getProportionateScreenWidth(137),
+                  padding: EdgeInsets.all(
+                    getProportionateScreenWidth(kDefaultPadding),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white, 
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                    boxShadow: [kDefualtShadow],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        travelSpots[0].name,
+                        style: TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w600
+                        ),
+                      ),
+                      Travelers()
+                    ],
+                  ),
+                )
               ],
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class Travelers extends StatelessWidget {
+  const Travelers({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipOval(
+       child: Image.asset(
+        travelSpots[0].users[0].image,
+        height: getProportionateScreenHeight(28),
+        width: getProportionateScreenWidth(28),
+        fit: BoxFit.cover,
       ),
     );
   }
