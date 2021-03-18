@@ -87,18 +87,32 @@ class Travelers extends StatelessWidget {
         children: [
          ...List.generate(travelSpots[0].users.length, 
          (index) => Positioned(
-           left: 0,
-           child: buildTravelerFace(),
-         ))
+           left: (22 * index).toDouble(),
+           child: buildTravelerFace(index),
+         )),
+         SizedBox(
+          height: getProportionateScreenWidth(28),
+          width: getProportionateScreenWidth(28),
+          child: FlatButton(
+            padding: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)
+            ),
+            color: kPrimaryColor,
+             onPressed: () {}, 
+             child: Icon(Icons.add
+             )
+            ),
+         )
         ],
       ),
     );
   }
 
-  ClipOval buildTravelerFace() {
+  ClipOval buildTravelerFace(int index) {
     return ClipOval(
          child: Image.asset(
-          travelSpots[0].users[0].image,
+          travelSpots[0].users[index].image,
           height: getProportionateScreenHeight(28),
           width: getProportionateScreenWidth(28),
           fit: BoxFit.cover,
