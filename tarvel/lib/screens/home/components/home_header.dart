@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:travel/screens/components/search_field.dart';
-import '../../size_config.dart';
 import 'package:file/memory.dart';
+import 'package:travel/screens/home/components/search_field.dart';
+
+import '../../../size_config.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -26,7 +27,7 @@ class HomeHeader extends StatelessWidget {
               "Travelers",
               style: TextStyle(fontSize: getProportionateScreenWidth(73),
               fontWeight: FontWeight.bold,
-              color: Colors.tealAccent
+              color: Colors.white
               ),
             ),
             Text(

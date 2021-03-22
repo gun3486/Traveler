@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel/screens/components/body.dart';
 import 'package:travel/size_config.dart';
+import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
