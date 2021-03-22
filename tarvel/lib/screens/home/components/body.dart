@@ -79,16 +79,18 @@ class Travelers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int totalUser = 0;
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenWidth(30),
       child: Stack(
         children: [
-         ...List.generate(travelSpots[0].users.length, 
-         (index) => Positioned(
-           left: (22 * index).toDouble(),
-           child: buildTravelerFace(index),
-         )),
+          ...List.generate(travelSpots[0].users.length,(index) {
+              return Positioned(
+              left: (22 * index).toDouble(),
+              child: buildTravelerFace(index),
+            );
+         }),
          SizedBox(
           height: getProportionateScreenWidth(28),
           width: getProportionateScreenWidth(28),
