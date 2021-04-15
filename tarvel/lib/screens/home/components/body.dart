@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
             press: () {},
           ),
           SizedBox(
-            width: getProportionateScreenWidth(137),
+            width: getProportionateScreenWidth(138),
             child: Column(
               children: [
                 AspectRatio(
