@@ -93,8 +93,8 @@ class Travelers extends StatelessWidget {
             );
          }),
          SizedBox(
-          height: getProportionateScreenWidth(27),
-          width: getProportionateScreenWidth(27),
+          height: getProportionateScreenWidth(28),
+          width: getProportionateScreenWidth(28),
           child: FlatButton(
             padding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
